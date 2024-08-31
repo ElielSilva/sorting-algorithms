@@ -1,5 +1,6 @@
 import algorithms.DoubleSort;
 import algorithms.InsertionSort;
+import algorithms.MergeSort;
 import algorithms.SelectionSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -34,6 +35,17 @@ public class TestSortingAlgorithms {
         int[] actualTestOrdered = SelectionSort.Sort(new int[]{1,2,3,4,5,6,7,8,9});
         int[] actualDecoded = SelectionSort.Sort(new int[]{3,6,9,2,5,8,1,4,7});
         int[] actualTestInverseOrdered = SelectionSort.Sort(new int[]{9,8,7,6,5,4,3,2,1});
+        Assertions.assertArrayEquals(expected, actualTestOrdered);
+        Assertions.assertArrayEquals(expected, actualDecoded);
+        Assertions.assertArrayEquals(expected, actualTestInverseOrdered);
+    }
+
+    @Test
+    public void testMergeSort(){
+        int[] expected = new int[] {1,2,3,4,5,6,7,8,9};
+        int[] actualTestOrdered = MergeSort.Sort(new int[]{1,2,3,4,5,6,7,8,9});
+        int[] actualDecoded = MergeSort.Sort(new int[]{3,6,9,2,5,8,1,4,7});
+        int[] actualTestInverseOrdered = MergeSort.Sort(new int[]{9,8,7,6,5,4,3,2,1});
         Assertions.assertArrayEquals(expected, actualTestOrdered);
         Assertions.assertArrayEquals(expected, actualDecoded);
         Assertions.assertArrayEquals(expected, actualTestInverseOrdered);
